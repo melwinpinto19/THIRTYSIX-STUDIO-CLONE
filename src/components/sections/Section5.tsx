@@ -16,6 +16,12 @@ function Section5() {
     "Data Scientist",
     "Business Analyst",
     "Marketing Manager",
+    "DevOps Engineer",
+    "Sales Manager",
+    "Product Designer",
+    "Graphic Designer",
+    "Content Writer",
+    "Customer Support",
   ]);
   return (
     <div className="">

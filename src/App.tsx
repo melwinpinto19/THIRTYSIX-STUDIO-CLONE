@@ -11,6 +11,7 @@ import { CanvasSlice } from "./store/reducers/canavsSlice";
 import gsap from "gsap";
 import { colorPallet } from "./constants/index";
 import Section5 from "./components/sections/Section5";
+import Section6 from "./components/sections/Section6";
 
 function App() {
   const showCanvas = useSelector(
@@ -103,6 +104,23 @@ function App() {
               <Canvas key={index} canvasDetails={canvasDetail} />
             ))}
           <Section4 />
+        </div>
+
+        {/* section 6 */}
+        <div
+          className="min-h-screen w-full relative border-b-gray-500 border-b"
+          style={{
+            backgroundColor: showCanvas
+              ? colorPallet.primaryColor.invert
+              : "#000",
+          }}
+        >
+          {showCanvas &&
+            canvasDetails[5].map((canvasDetail, index) => (
+              <Canvas key={index} canvasDetails={canvasDetail} />
+            ))}
+
+          <Section6 />
         </div>
 
         {/* section 5 */}
