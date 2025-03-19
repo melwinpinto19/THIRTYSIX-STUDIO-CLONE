@@ -2,6 +2,8 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CanvasSlice, showCanvas } from "../store/reducers/canavsSlice";
+import { useSelector } from "react-redux";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,6 +43,9 @@ const items: { title: string; description: string }[] = [
 function Highlights() {
   const highlightRef = useRef<HTMLDivElement[]>([]);
   const textRef = useRef<HTMLDivElement[][]>([]);
+  const displayCanvas = useSelector(
+    (state: CanvasSlice) => state.canvas.showCanvas
+  );
 
   useGSAP(() => {
     if (highlightRef.current.length === 0) return;
@@ -82,7 +87,10 @@ function Highlights() {
           key={index}
         >
           <div className="w-[60%]">
-            <span className="text-white text-[110px]">
+            <span
+              className={`text-[110px]`}
+              style={{ color: displayCanvas ? "#000" : "#fff" }}
+            >
               {item.title.split("").map((each) => (
                 <span
                   ref={(el) => {
@@ -96,7 +104,12 @@ function Highlights() {
             </span>
           </div>
           <div className=" py-1 px-3 w-[20%]">
-            <span className="text-white">{item.description}</span>
+            <span
+              className=""
+              style={{ color: displayCanvas ? "#000" : "#fff" }}
+            >
+              {item.description}
+            </span>
           </div>
         </div>
       ))}
