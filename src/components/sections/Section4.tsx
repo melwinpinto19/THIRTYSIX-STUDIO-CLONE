@@ -1,4 +1,3 @@
-import React from "react";
 import Highlights from "../Highlights";
 import { useSelector } from "react-redux";
 import { CanvasSlice } from "../../store/reducers/canavsSlice";

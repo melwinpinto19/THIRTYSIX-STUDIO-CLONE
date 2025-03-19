@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { CanvasSlice, showCanvas } from "../store/reducers/canavsSlice";
+import { CanvasSlice } from "../store/reducers/canavsSlice";
 import { useSelector } from "react-redux";
 
 gsap.registerPlugin(ScrollTrigger);

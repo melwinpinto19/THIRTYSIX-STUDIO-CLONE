@@ -2,7 +2,7 @@ import React from "react";
 import AnimatedLine from "../AnimatedLine";
 
 function Section6() {
-  const [paragraph, setParagraph] = React.useState<string[][]>([
+  const [paragraph] = React.useState<string[][]>([
     [
       "At Thirtysixstudio, we recognize that our industry",
       "can perpetuate harm. We believe we have to try ",
@@ -21,9 +21,9 @@ function Section6() {
 
   return (
     <div className="w-full pl-[20%] flex flex-col gap-[20px] pt-[100px]">
-      {paragraph.map((para, index) => (
+      {paragraph.map((para, ) => (
         <div>
-          {para.map((text, index) => (
+          {para.map((text, ) => (
             <AnimatedLine line={text} />
           ))}
         </div>

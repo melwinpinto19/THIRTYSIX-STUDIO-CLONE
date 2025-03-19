@@ -1,8 +1,5 @@
-import React, { useRef } from "react";
 import { useSelector } from "react-redux";
 import { CanvasSlice } from "../store/reducers/canavsSlice";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import AnimatedWord from "./AnimatedWord";
 
 function AnimatedLine({ line }: { line: string }) {

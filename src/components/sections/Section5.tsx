@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useSelector } from "react-redux";
 import { CanvasSlice } from "../../store/reducers/canavsSlice";
 import { Minus, Plus } from "lucide-react";
@@ -9,7 +9,7 @@ function Section5() {
     (state: CanvasSlice) => state.canvas.showCanvas
   );
   const [collapse, setCollapse] = useState(false);
-  const [roles, setRoles] = useState([
+  const [roles] = useState([
     "Software Engineer",
     "Product Manager",
     "UX Designer",

@@ -1,7 +1,7 @@
 import { Plus, Minus } from "lucide-react";
 import { useSelector } from "react-redux";
 import { CanvasSlice } from "../store/reducers/canavsSlice";
-import { useEffect, useRef, useState } from "react";
+import { useEffect,  useState } from "react";
 import { useGSAP } from "@gsap/react";
 import EachCollapsibleChildren from "./EachCollapsibleChildren";
 

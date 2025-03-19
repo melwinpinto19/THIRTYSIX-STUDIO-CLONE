@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useSelector } from "react-redux";
 import { CanvasSlice } from "../store/reducers/canavsSlice";
 import gsap from "gsap";
